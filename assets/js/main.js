@@ -5,6 +5,12 @@ let danachRadio = document.getElementById("danachRadio")
 let ausgabeVorne = document.getElementById("ausgabeVorne")
 let ausgabeHinten = document.getElementById("ausgabeHinten")
 
+let satz = inputSatz.value // b1
+let wort = inputWort.value // 
+let wortWo = satz.indexOf(wort) // b2
+let satzLaenge = satz.length // b
+let wortLaenge = wort.length // laengeWort
+let summeZeichen = Number(wortWo+(wortLaenge+1)) // c1
 
 function trennen(){
     a = (inputSatz.value).split(" ")
@@ -27,25 +33,20 @@ function trennen(){
     ausgabeHinten.innerHTML = (b1.slice(c1,b))
 }
 
-function check(){
-    satz = inputSatz.value // b1
-    wort = inputWort.value // 
-    wortWo = satz.indexOf(wort) // b2
-    satzLaenge = satz.length // b
-    wortLaenge = wort.length // laengeWort
-    summeZeichen = Number(wortWo+(wortLaenge+1)) // c1
+check = () => {
+    let satz = inputSatz.value // b1
+    let wort = inputWort.value // 
+    let wortWo = satz.indexOf(wort) // b2
+    let satzLaenge = satz.length // b
+    let wortLaenge = wort.length // laengeWort
+    let summeZeichen = Number(wortWo+(wortLaenge+1)) // c1
 
-
-    switch(danachRadio.checked){
-        case true:
-            console.log("Hello")
-            ausgabeVorne.innerHTML = satz.substr(0,(satz.indexOf(wort)+wortLaenge))
-            ausgabeHinten.innerHTML =  satz.slice(summeZeichen ,satzLaenge)
-            break;
-        case false:
-            ausgabeVorne.innerHTML = satz.substr(0,(satz.indexOf(wort)))
-            ausgabeHinten.innerHTML =  satz.slice(wortWo ,satzLaenge)
-            console.log(wort)
-            break;
+    if(danachRadio.checked === true){
+        ausgabeVorne.innerHTML = satz.substr(0,(satz.indexOf(wort)+wortLaenge))
+        ausgabeHinten.innerHTML =  satz.slice(summeZeichen ,satzLaenge)
+        console.log("Hello")
+    } else if(davorRadio.checked === true){
+        ausgabeVorne.innerHTML = satz.substr(0,(satz.indexOf(wort)))
+        ausgabeHinten.innerHTML =  satz.slice(wortWo ,satzLaenge)
     }
 }

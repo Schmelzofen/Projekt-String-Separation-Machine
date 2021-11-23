@@ -9,21 +9,27 @@
   </head>
   <body>
     <main>
-      <h1>Zeichenkettentrennungsmaschine</h1>
-      <h2>Zu trennende Zeichenkette:</h2>
-      <input type="text" name="" id="inputSatz" />
-      <h2>Zeichenkette für die Trennungsposition:</h2>
-      <input type="text" name="" id="inputWort" />
-      <input type="radio" name="trennen" id="davorRadio" />
-      <label for="trennen">davor trennen</label>
-      <input type="radio" name="trennen" id="danachRadio" />
-      <label for="trennen">danach trennen</label>
-      <input type="button" value="Trennen" onclick="check()" />
-      <section class="ausgabe">
-        <h2>Vorderer Teil</h2>
-        <p id="ausgabeVorne"></p>
-        <h2>Hinterer Teil</h2>
-        <p id="ausgabeHinten"></p>
+      <section class="main-part">
+        <form action="schneiden">
+          <h1>Zeichenkettentrennungsmaschine</h1>
+          <h2>Zu trennende Zeichenkette:</h2>
+          <input type="text" name="" id="inputSatz" />
+          <h2>Zeichenkette für die Trennungsposition:</h2>
+          <input type="text" name="" id="inputWort" />
+          <div class="radio-button">
+            <input type="radio" name="text" id="davorRadio" />
+            <label for="davorRadio">davor trennen</label>
+            <input type="radio" name="text" id="danachRadio" />
+            <label for="danachRadio">danach trennen</label>
+          </div>
+          <input type="button" value="Trennen" onclick="check()" />
+        </form>
+        <section class="ausgabe">
+          <h2>Vorderer Teil</h2>
+          <p id="ausgabeVorne">Platzhalter</p>
+          <h2>Hinterer Teil</h2>
+          <p id="ausgabeHinten">Platzhalter</p>
+        </section>
       </section>
     </main>
     <script src="./assets/js/main.js"></script>
