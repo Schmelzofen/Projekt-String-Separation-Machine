@@ -13,11 +13,16 @@
         <form action="schneiden">
           <h1>Zeichenkettentrennungsmaschine</h1>
           <h2>Zu trennende Zeichenkette:</h2>
-          <input type="text" name="" id="inputSatz" />
+          <input
+            type="text"
+            name=""
+            id="inputSatz"
+            placeholder="Steffen ist der coolste Trainer"
+          />
           <h2>Zeichenkette für die Trennungsposition:</h2>
-          <input type="text" name="" id="inputWort" />
+          <input type="text" name="" id="inputWort" placeholder="der" />
           <div class="radio-button">
-            <input type="radio" name="text" id="davorRadio" />
+            <input type="radio" name="text" id="davorRadio" checked="checked" />
             <label for="davorRadio">davor trennen</label>
             <input type="radio" name="text" id="danachRadio" />
             <label for="danachRadio">danach trennen</label>
@@ -26,9 +31,9 @@
         </form>
         <section class="ausgabe">
           <h2>Vorderer Teil</h2>
-          <p id="ausgabeVorne">Platzhalter</p>
+          <p id="ausgabeVorne">Steffen ist</p>
           <h2>Hinterer Teil</h2>
-          <p id="ausgabeHinten">Platzhalter</p>
+          <p id="ausgabeHinten">der coolste Trainer</p>
         </section>
       </section>
     </main>

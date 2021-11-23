@@ -5,13 +5,6 @@ let danachRadio = document.getElementById("danachRadio")
 let ausgabeVorne = document.getElementById("ausgabeVorne")
 let ausgabeHinten = document.getElementById("ausgabeHinten")
 
-let satz = inputSatz.value // b1
-let wort = inputWort.value // 
-let wortWo = satz.indexOf(wort) // b2
-let satzLaenge = satz.length // b
-let wortLaenge = wort.length // laengeWort
-let summeZeichen = Number(wortWo+(wortLaenge+1)) // c1
-
 function trennen(){
     a = (inputSatz.value).split(" ")
     a1 = (a.indexOf(inputWort.value))
